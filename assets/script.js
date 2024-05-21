@@ -104,7 +104,7 @@ function handleSearch(targetCity) {
     // The url to converts the specified name of a location or zip/post code into the exact geographical coordinates
     // http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 
-    queryURL = "http://api.openweathermap.org/geo/1.0/direct?q="+targetCity+apiKeyValue;
+    queryURL = "https://api.openweathermap.org/geo/1.0/direct?q="+targetCity+apiKeyValue;
     fetch(queryURL)
         .then(response => response.json())
         .then(data => {
