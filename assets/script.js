@@ -109,7 +109,7 @@ function handleSearch(targetCity) {
         .then(response => response.json())
         .then(data => {
             apiDatabyCity = data;
-            console.log(apiDatabyCity);
+            // console.log(apiDatabyCity);
             if (apiDatabyCity.length == 0) {
                 // city not found
                 // console.log('City not found');
@@ -119,31 +119,31 @@ function handleSearch(targetCity) {
                 // console.log('Yes, city exist');
                 var cityLat = apiDatabyCity[0].lat;
                 var cityLon = apiDatabyCity[0].lon;
-                console.log(cityLat,cityLon);
+                // console.log(cityLat,cityLon);
 
                 // a second fetch to get the todays weather for the city
                 // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
                 queryURL = "https://api.openweathermap.org/data/2.5/weather?"+"lat="+String(cityLat)+"&lon="+String(cityLon)+apiKeyValue+"&units=metric";
-                console.log(queryURL);
+                // console.log(queryURL);
                 fetch(queryURL)
                     .then(response => response.json())
                     .then(data => {
                         // console.log(data);
                         apiDataTodayWeather = data;
-                        console.log('doing the second fetch');
-                        console.log(apiDataTodayWeather);
+                        // console.log('doing the second fetch');
+                        // console.log(apiDataTodayWeather);
                      });
                 // a third fecth to get the 5 days forecast of the city     
                 // (https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid={API key})
                 queryURL = "https://api.openweathermap.org/data/2.5/forecast?"+"lat="+String(cityLat)+"&lon="+String(cityLon)+apiKeyValue+"&units=metric";
-                console.log(queryURL);
+                // console.log(queryURL);
                 fetch(queryURL)
                     .then(response => response.json())
                     .then(data => {
                         // console.log(data);
                         apiDatabyLatLon = data;
-                        console.log('doing the third fetch');
-                        console.log(apiDatabyLatLon);
+                        // console.log('doing the third fetch');
+                        // console.log(apiDatabyLatLon);
                         // call the function to render info
                         renderWeatherInfo();
                         handleLocalStorage();
