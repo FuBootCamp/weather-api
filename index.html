@@ -9,8 +9,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -20,7 +20,8 @@
     <div class="container-fluid">
         <div class="row">
 
-          <div class="col-xl-3"  style="background-color:#aaa">
+          <!-- <div class="col-xl-3"  style="background-color:#aaa"> -->
+          <div class="col-xl-3">
             <h3>Search for a City:</h3>
             
             <div> 
@@ -37,64 +38,36 @@
             <br>
             <div>
                 <div>
-                    <form> 
-                        <button type="button" class="btn btn-outline-secondary btn-block">Atlanta</button>
+                    <h3>Serch history</h3>
+                    <form id="buttonsofSearchedCities"> 
+                        <!-- <button type="button" class="btn btn-outline-secondary btn-block">Atlanta</button>
                         <button type="button" class="btn btn-outline-secondary btn-block">Denver</button>
-                        <button type="button" class="btn btn-outline-secondary btn-block">Seatle</button>
+                        <button type="button" class="btn btn-outline-secondary btn-block">Seatle</button> -->
                     </form>
                 </div>
             </div>
             
           </div>
 
-          <div class="col-xl-9"  style="background-color:#bbb">
-                <div>
-                    <h3>Atlanta</h3> 
-                    <p>Temp:      76.62 °F</p>
-                    <p>Wind:      8.43 MPH</p>
-                    <p>Humidity : 44% °F</p>
+          <!-- <div class="col-xl-9" style="background-color:#aaa"> -->
+          <div class="col-xl-9">
+                <div id="cityInfo">
+                    <div>
+                        <!-- A div for the city weather info -->
+                    </div>
                 </div>
                 <div>
                     <h4>5-Day Forecast</h4>
                 </div>
-                      
-                <div class="row">
-                    <div class="col">
-                        <p>9/14/2022</p>
-                        <p></p>
-                        <p>Temp: 63.55 °F</p>
-                        <p>Wind: 3.94 MPH</p>
-                        <p>Humidity: 63%</p>
-                    </div>
-                    <div class="col">
-                        <p>10/14/2022</p> 
-                        <p>Temp: 63.55 °F</p>
-                        <p>Wind: 3.94 MPH</p>
-                        <p>Humidity: 63%</p>
-                    </div>
-                    <div class="col">
-                        <p>11/14/2022</p> 
-                        <p>Temp: 63.55 °F</p>
-                        <p>Wind: 3.94 MPH</p>
-                        <p>Humidity: 63%</p>
-                    </div>
-                    <div class="col">
-                        <p>12/14/2022</p> 
-                        <p>Temp: 63.55 °F</p>
-                        <p>Wind: 3.94 MPH</p>
-                        <p>Humidity: 63%</p>
-                    </div>
-                    <div class="col">
-                        <p>13/14/2022</p> 
-                        <p>Temp: 63.55 °F</p>
-                        <p>Wind: 3.94 MPH</p>
-                        <p>Humidity: 63%</p>
-                    </div>
+                    <!-- a DIV to append the temperature forecast of the 5 days -->
+                <div class="row" id="addColumnsDiv">
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Added link to the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
